@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Intern Registratio Form</title>
+</head>
+<body>
+
+    <header>
+        <h1>Intern Registration Form</h1>
+        <p>
+            Welcome to the <strong>Summer Internship Program</strong> registration page.
+            Please complete the form below to apply as an intern. All required fields
+            are marked and must be filled in before you submit. Your information will
+            be used to schedule your interview and assign you to a training batch.
+           <br> <em>Thank you for your interest!</em>
+        </p>
+    </header>
+
+    <hr>
+
+    <main>
+        <form action="/submit-registration" method="post">
+
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <p>
+                    <label for="first_name">First Name:</label><br>
+                    <input type="text" id="first_name" name="first_name"
+                           placeholder="Enter first name">
+                </p>
+
+                <p>
+                    <label for="last_name">Last Name:</label><br>
+                    <input type="text" id="last_name" name="last_name"
+                           placeholder="Enterlast name">
+                </p>
+
+                <p>
+                    <label for="email">Email Address:</label><br>
+                    <input type="email" id="email" name="email"
+                           placeholder="usman@mail.com">
+                </p>
+
+                <p>
+                    <label for="phone">Phone Number:</label><br>
+                    <input type="tel" id="phone" name="phone"
+                           placeholder="+923001234567">
+                </p>
+
+                <p>
+                    <label for="dob">Date of Birth:</label><br>
+                    <input type="date" id="dob" name="dob">
+                </p>
+
+                <p>
+                    <label for="portfolio">Portfolio URL:</label><br>
+                    <input type="url" id="portfolio" name="portfolio"
+                           placeholder="https://myportfolio.com">
+                </p>
+                
+            </fieldset>
+            </form>
+
+            <br>
+
+            <fieldset>
+                <legend>Interview & Training Preferences</legend>
+
+                <p>
+                    <label for="interview_time">Preferred Interview Time:</label><br>
+                    <input type="time" id="interview_time"  value="10:00">
+                </p>
+
+                <p>
+                    <label for="training_month">Preferred Training Month:</label><br>
+                    <select id="training_month" name="training_month" required>
+                        <option value="">-- Select a month --</option>
+                        <option value="January">October</option>
+                        <option value="February">Novermber</option>
+                        <option value="March">December</option>
+
+                    </select>
+                </p>
+
+                <p>
+                    <label for="training_week">Preferred Training Week:</label><br>
+                    <select id="training_week" name="training_week">
+                        <option value="Week 1">Week 1</option>
+                        <option value="Week 2">Week 2</option>
+                        <option value="Week 3">Week 3</option>
+                        <option value="Week 4">Week 4</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="milestone">Milestone:</label><br>
+                    <select id="milestone" name="milestone">
+                        <optgroup label="Early Stage">
+                            <option value="orientation">Orientation Complete</option>
+                            <option value="onboarding">Onboarding</option>
+                        </optgroup>
+                        <optgroup label="Mid Stage">
+                            <option value="first_project">First Project Review</option>
+                            <option value="midpoint">Midpoint Check-in</option>
+                        </optgroup>
+                        <optgroup label="Final Stage">
+                            <option value="final_review">Final Review</option>
+                            <option value="certification">Certification</option>
+                        </optgroup>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="skill_range">Skill Level (1 = Beginner, 10 = Expert):</label><br>
+                    <input type="range" id="skill_range" name="skill_range"
+                           min="1" max="10" step="1" value="5" list="skill_ticks">
+                    <datalist id="skill_ticks">
+                        <option value="1" label="Beginner"></option>
+                        <option value="5" label="Intermediate"></option>
+                        <option value="10" label="Expert"></option>
+                    </datalist>
+                </p>
+
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Skills & Interests (Select all that apply)</legend>
+
+                <p>
+                    <input type="checkbox" id="skill_html" name="skills" value="HTML">
+                    <label for="skill_html">HTML</label><br>
+
+                    <input type="checkbox" id="skill_css" name="skills" value="CSS">
+                    <label for="skill_css">CSS</label><br>
+
+                    <input type="checkbox" id="skill_js" name="skills" value="JavaScript">
+                    <label for="skill_js">JavaScript</label><br>
+
+                    <input type="checkbox" id="skill_python" name="skills" value="Python">
+                    <label for="skill_python">PHP</label><br>
+
+                    <input type="checkbox" id="skill_design" name="skills" value="Design">
+                    <label for="skill_design">Laravel</label><br>
+
+                    <input type="checkbox" id="skill_data" name="skills" value="Data Analysis">
+                    <label for="skill_data">System Design</label>
+                </p>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Additional Details & Security</legend>
+
+                <p>
+                    <label for="resume">Upload Resume (PDF, Doc, DOCX, TXT only):</label><br>
+                    <input type="file" id="resume" name="resume"
+                           accept=".pdf,.doc,.docx,.txt" required>
+                </p>
+
+                <p>
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password"
+                           placeholder="Minimum 8 characters"
+                           minlength="8" autocomplete="new-password" required>
+                </p>
+
+                   <p>
+                    <label for="confirm_password">Re-Type Password:</label><br>
+                    <input type="password" id="confirm_password" name="confirm_password"
+                           placeholder="Minimum 8 characters"
+                           minlength="8" autocomplete="new-password" required>
+                </p>
+
+                  <p>
+        <small>
+            Note: Both passwords must match. Mismatch is checked after you submit.
+        </small>
+    </p>
+    
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Terms & Conditions</legend>
+
+                <p>
+                    <input type="checkbox" id="terms" name="terms" value="agreed" required>
+                    <label for="terms">I agree to the terms and conditions of the internship program.</label>
+                </p>
+            </fieldset>
+
+            <br>
+
+            <p>
+                <button type="submit">Sign Up</button>
+                <button type="reset">Reset Form</button>
+            </p>
+
+        </form>
+
+      
+
+    <hr>
+
+    <footer>
+        <p>
+            <small> 2026 Internship Office. All rights reserved.</small>
+        </p>
+    </footer>
+
+</body>
+</html>
